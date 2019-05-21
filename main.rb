@@ -8,13 +8,6 @@ require_relative 'models/aged_care_service'
 require_relative 'models/service'
 require_relative 'models/user'
 
-
-require_relative 'db_config'
-require_relative 'models/agedcare'
-require_relative 'models/agedcares_service'
-require_relative 'models/service'
-require_relative 'models/user'
-
 enable :sessions
 
 get '/agedcares' do
