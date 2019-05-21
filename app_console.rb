@@ -4,6 +4,6 @@ require 'bcrypt'
 # more things here 
 
 # lets tell the translation about our tables
-
+require_relative 'models/agedcare'
 
 binding.pry
