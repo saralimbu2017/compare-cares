@@ -23,12 +23,13 @@ get '/login' do
   erb :login
 end
 
+get '/agedcares' do
+  erb :agedcares
+end
 
 helpers do
 
   def current_user
-    
-
   end 
   def logged_in?
 

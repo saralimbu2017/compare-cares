@@ -5,25 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>compare care</title>
+  <link rel="stylesheet" href="/stylesheets/main.css">
 </head>
 <body>
-  <header>
-    <div class="logo"></div>
-    <div class="user-control">
-      <a href="/signup">Sign Up</a>
-      <a href="/login">Log In</a>
+  <header class="ui-header">
+    <div class="ui-intro">
+      <div class="logo">
+        <span >Compare Cares!</span>
+      </div> 
+      <div class="user-control">
+        <span > 
+        <a href="/signup">Sign Up</a>
+        <a href="/login">Log In</a>
+        </span>
+      </div>
     </div>
+    <nav class="ui-menu">
+      
+       <div class="home-menu">Home</div> 
+       <div class="about-menu">About</div> 
+       <div class="contact-menu">Contact Us</div>
+    </nav>
   </header>
-  <nav>
-    <a href="">Home</a>
-    <a href="">About</a>
-    <a href="">Contact</a>
-  </nav>
-  <div class="container">
-     
-
      <%= yield %>
-  </div>
   <footer></footer>
   
 </body>
