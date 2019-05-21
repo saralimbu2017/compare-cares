@@ -20,18 +20,20 @@ CREATE TABLE agedcares(
 
 CREATE TABLE services(
   id SERIAL PRIMARY KEY,
-  food TEXT,
-  room TEXT,
-  physical_therapy TEXT,
-  gym TEXT,
-  housekeeping TEXT,
-  movie_theatre TEXT,
-  swimming_pool TEXT,
-  outings TEXT,
-  bowling TEXT,
-  library_internet TEXT
-  
+  name TEXT
 );
+
+INSERT INTO services(name) VALUES ('food');
+INSERT INTO services(name) VALUES ('room');
+INSERT INTO services(name) VALUES ('physio_therapy');
+INSERT INTO services(name) VALUES ('gym');
+INSERT INTO services(name) VALUES ('housekeeping');
+INSERT INTO services(name) VALUES ('movie_theatre');
+INSERT INTO services(name) VALUES ('swimming_pool');
+INSERT INTO services(name) VALUES ('outings');
+INSERT INTO services(name) VALUES ('bowling');
+INSERT INTO services(name) VALUES ('library_internet');
+
 
 -- bridging table for agedcare and services due to many to many relationship
 CREATE TABLE agedcares_services(
