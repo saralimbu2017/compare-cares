@@ -2,6 +2,12 @@ require 'sinatra'
 require 'pry'
 require 'sinatra/reloader'
 require 'bcrypt'
+require_relative 'db_config'
+require_relative 'models/agedcare'
+require_relative 'models/agedcares_service'
+require_relative 'models/service'
+require_relative 'models/user'
+
 
 enable :sessions
 

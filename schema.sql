@@ -29,8 +29,8 @@ CREATE TABLE services(
   swimming_pool TEXT,
   outings TEXT,
   bowling TEXT,
-  library_internet TEXT,
-  agedcare_id
+  library_internet TEXT
+  
 );
 
 -- bridging table for agedcare and services due to many to many relationship
