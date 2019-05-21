@@ -1,7 +1,13 @@
-CREATE DATABASE compare_cares;
+--CREATE DATABASE compare_cares;
+
+DROP TABLE IF EXISTS users CASCADE;
+DROP TABLE IF EXISTS aged_cares CASCADE;
+DROP TABLE IF EXISTS services CASCADE;
+DROP TABLE IF EXISTS aged_care_services CASCADE;
+
 
 ALTER SEQUENCE IF EXISTS users_id_seq RESTART WITH 1;
-ALTER SEQUENCE IF EXISTS agedcares_id_seq RESTART WITH 1;
+ALTER SEQUENCE IF EXISTS aged_cares_id_seq RESTART WITH 1;
 ALTER SEQUENCE IF EXISTS services_id_seq RESTART WITH 1;
 
 CREATE TABLE users(
@@ -10,10 +16,11 @@ CREATE TABLE users(
   password_digest VARCHAR(200)
 );
 
-CREATE TABLE agedcares(
+CREATE TABLE aged_cares(
   id SERIAL PRIMARY KEY,
+  name VARCHAR(200),
   location VARCHAR(200),
-  amount FLOAT(2),
+  cost FLOAT(2),
   rating INTEGER,
   user_id INTEGER
 );
@@ -36,9 +43,21 @@ INSERT INTO services(name) VALUES ('library_internet');
 
 
 -- bridging table for agedcare and services due to many to many relationship
-CREATE TABLE agedcares_services(
-  agedcare_id INTEGER,
+CREATE TABLE aged_care_services(
+  aged_care_id INTEGER,
   service_id INTEGER
 );
 
+-- adding constraints to the database
+ALTER TABLE aged_care_services
+ADD CONSTRAINT aged_care_services_aged_care_id_fkey
+FOREIGN KEY (aged_care_id) REFERENCES aged_cares(id);
+
+ALTER TABLE aged_care_services
+ADD CONSTRAINT aged_care_services_service_id_fkey
+FOREIGN KEY (service_id) REFERENCES services(id);
+
+ALTER TABLE aged_cares
+ADD CONSTRAINT aged_care_user_id_fkey
+FOREIGN KEY (user_id) REFERENCES users(id);
 
