@@ -20,7 +20,7 @@
         <legend>Select Aged Care Services</legend>
         <% @services.each do |service| %>
           <div>
-            <input type="checkbox" name="service-<%= service.name %>" value="<%= service.id %>" />
+            <input type="checkbox" name="service[<%= service.name %>]" value="<%= service.id %>" />
             <label for="<%= service.name %>"><%= service.name %></label>
           </div>
         <% end %>

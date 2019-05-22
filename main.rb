@@ -20,23 +20,24 @@ get '/services' do
 end
 
 post '/services' do
-  agedcares = AgedCare.new
-  agedcares.name = params[:name]
-  agedcares.location = params[:location]
-  agedcares.cost = params[:cost]
-  agedcares.save
+  agedcare = AgedCare.new
+  agedcare.name = params[:name]
+  agedcare.location = params[:location]
+  agedcare.cost = params[:cost]
+  agedcare.save
 
-  # loop through all service- params and create a aged care service for each one
-  # where the aged care id is from saved aged cares and services id comes from
-  # the corresponding param value
-  # also increase score by 1 to calculate and update rating and save
-  # save them all
-  # redirect to '/services/:id'
+  services = params["service"]
+  services.each do |name, id|
+    aged_care_service = AgedCareService.new
+    aged_care_service.aged_care_id = agedcare.id
+    aged_care_service.service_id = Service.find_by(name: name ).id
+    aged_care_service.save
+  end
+  redirect '/'
 end
 
 get '/services/:id' do
   @agedcares = AgedCare.find(params[:id])
-  # view the saved aged care info
   erb :services_listing 
 end
 
@@ -69,6 +70,11 @@ get '/signup' do
 end
 
 post '/signup' do
+  user = User.new
+  user.email = params[:user_email]
+  user.password = params[:user_password]
+  user.save
+  @services = Service.all
   erb :services
 end
 
@@ -89,10 +95,13 @@ post '/session' do
   user = User.find_by(email:params[:user_email])
   if user && user.authenticate(params[:user_password])
     session[:user_id] = user.id
+    @services = Service.all
     erb :services
   else
     erb :login
   end
+  # @services = Service.all
+  # erb :services
 end
 
 delete '/session' do

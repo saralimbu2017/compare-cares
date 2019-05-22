@@ -22,6 +22,7 @@ CREATE TABLE aged_cares(
   location VARCHAR(200),
   cost FLOAT(2),
   rating INTEGER,
+  image TEXT,
   user_id INTEGER
 );
 
