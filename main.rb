@@ -10,8 +10,6 @@ require_relative 'models/user'
 
 enable :sessions
 
-<<<<<<< HEAD
-=======
 helpers do
 
   def current_user
@@ -48,7 +46,6 @@ get '/login' do
   erb :login
 end
 
->>>>>>> signup and login updated
 get '/agedcares' do
   erb :agedcares
 end
@@ -83,26 +80,6 @@ get '/contact' do
   erb :contact
 end
 
-
-<<<<<<< HEAD
-after do
-  ActiveRecord::Base.connection.close
-end 
-=======
->>>>>>> signup and login updated
-
-
-get '/' do
-  erb :index
-end
-
-get '/signup' do
-  erb :signup
-end
-
-get '/login' do
-  erb :login
-end
 
 
 
