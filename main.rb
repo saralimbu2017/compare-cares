@@ -36,7 +36,6 @@ post '/services' do
     aged_care_service.service_id = Service.find_by(name: name ).id
     aged_care_service.save
     rating = rating + 1
-
   end
   agedcare.rating = rating
   agedcare.save
@@ -48,9 +47,7 @@ get '/services/:id' do
   erb :services_listing 
 end
 
-
 helpers do
-
   def current_user
     User.find_by(id:session[:user_id])
   end 
@@ -69,7 +66,6 @@ after do
 end 
 
 get '/' do
-  
   erb :index
 end
 
@@ -94,8 +90,6 @@ get '/agedcares' do
   erb :agedcares
 end
 
-
-
 post '/session' do
   user = User.find_by(email:params[:user_email])
   if user && user.authenticate(params[:user_password])
@@ -110,11 +104,9 @@ post '/session' do
 end
 
 delete '/session' do
- 
   session[:user_id] = nil
   redirect "/login"
 end
-
 
 get '/about' do
   erb :about
@@ -123,22 +115,3 @@ end
 get '/contact' do
   erb :contact
 end
-
-get '/details/:id' do
-  
-  # How to turn the sql into ActiveRecord?
-  sql = "select b.name, b.location, b.cost, c.name
-  from aged_care_services a
-  join aged_cares b          on a.aged_care_id = b.id
-  join services c            on a.service_id = c.id
-  where a.aged_care_id = #{params[:id]}"
-
-  @aged_care_services = ActiveRecord::Base.connection.execute(sql).values
-
-  erb :details
-end
-
-
-
-
-
