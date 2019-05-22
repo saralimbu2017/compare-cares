@@ -1,0 +1,17 @@
+.ui-listings-container{
+  width:90%;
+  height:100%;
+  background-color: mistyrose;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+img {
+  width: 40%;
+}
+
+.service-container {
+  display: flex;
+  flex-direction: column;
+}
