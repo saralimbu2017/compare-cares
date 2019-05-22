@@ -29,9 +29,10 @@ post '/services' do
   services = params["service"]
   services.each do |name, id|
     aged_care_service = AgedCareService.new
-    aged_care_service.aged_care_id = agedcare.id
+    @aged_care_service.aged_care_id = agedcare.id
     aged_care_service.service_id = Service.find_by(name: name ).id
     aged_care_service.save
+    
   end
   redirect '/'
 end
@@ -62,6 +63,7 @@ after do
 end 
 
 get '/' do
+  
   erb :index
 end
 
@@ -119,7 +121,11 @@ get '/contact' do
   erb :contact
 end
 
+post '/listings' do 
+  @location = params['location']
+  erb :listings
 
+end
 
 
 

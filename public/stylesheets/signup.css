@@ -1,0 +1,15 @@
+
+.ui-signup-container{
+  width: 100%;
+  padding: 0 30%;
+  margin-top: 5px;
+  
+}
+
+.ui-signup-container h1,p{
+  text-align: center;
+}
+
+.ui-signup-container h1{
+  color:#007bff;
+}

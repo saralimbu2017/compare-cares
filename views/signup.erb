@@ -1,12 +1,25 @@
 
+
+<div class="container">
+  <div class="ui-signup-container">
     <h1>Sign Up</h1>
     <p>Already have a Compare Care account? <a href="/login">Log in</a></p>
 
     <form action="/signup" method="post">
-      <input type="text" placeholder="Email" name="user_email">
-      <input type="password" name="user_password" id="" placeholder="Password">
-      <button class="submit">Submit</button>
+     <div class="form-group">
+        <label for="">Email</label>
+        <input type="text" placeholder="Email" name="user_email" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Password</label>
+        <input type="password" name="user_password" id="" placeholder="Password" class="form-control">
+      </div>
+      <button class="log-in btn-primary">Sign Up</button>
 
     </form>
+  
+  
+  </div>
+</div>
 
   

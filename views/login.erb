@@ -1,12 +1,21 @@
-
+<div class="container login-container">
+  <div class="ui-login-container">
     <h1>Log In</h1>
     <p>New to Compare Care? <a href="/signup">Sign Up</a></p>
 
     <form action="/session" method="post">
-      <input type="text" placeholder="Email" name="user_email">
-      <input type="password" name="user_password" id="" placeholder="Password">
-      <button class="log-in">Log In</button>
-
+      <div class="form-group">
+        <label for="">Email</label>
+        <input type="text" placeholder="Email" name="user_email" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="">Password</label>
+        <input type="password" name="user_password" id="" placeholder="Password" class="form-control">
+      </div>
+      <button class="log-in btn-primary">Log In</button>
     </form>
+  </div>
 
- 
+</div>
+
+

@@ -1,8 +1,9 @@
 <div class="container">
   <div class="ui-listings-container">
     <div class="btn">
-    <form action=""method="post">
-    
+    <p>Location: <%= @location %></p>
+    <form action="/compare" method="post">
+      
       <button class="compare-btn">COMPARE</button>
     
     </form>
@@ -10,7 +11,7 @@
     </div>
 
     <div class="listings">
-      <div class="agecare" data-id="">
+      <div class="agecare" data-id>
         <img src="images/download.jpeg" alt="">
         <p class="agecare-name">Lily</p>
         <div class="agecare-info">

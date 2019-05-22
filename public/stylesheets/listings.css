@@ -37,9 +37,10 @@ p .agecare-cost{
 
 .btn{
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 
 }
+
 
 .compare-btn{
   border-radius: 5px;
