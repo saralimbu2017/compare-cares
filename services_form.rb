@@ -7,11 +7,22 @@ get '/services' do
 end
 
 post '/services' do
-  agedcares = AgedCare.new
-  agedcares.name = params[:name]
-  agedcares.location = params[:location]
-  agedcares.cost = params[:cost]
-  agedcares.save
+  agedcare = AgedCare.new
+  agedcare.name = params[:name]
+  agedcare.location = params[:location]
+  agedcare.cost = params[:cost]
+  agedcare.save
+
+  services = params["service"]
+  services.each do |name,id|
+  aged_care_service = AgedCareService.new
+  aged_care_service.aged_care_id = agedcare.id
+  aged_care_service.service_id = Service.find_by(name: name ).id
+  aged_care_service.save
+  end
+end
+
+  
 
   # loop through all service- params and create a aged care service for each one
   # where the aged care id is from saved aged cares and services id comes from
@@ -23,7 +34,9 @@ end
 
 get '/services/:id' do
   @agedcares = AgedCare.find(params[:id])
+  if 
   # view the saved aged care info
+  
   erb :services_listing 
 
 end
