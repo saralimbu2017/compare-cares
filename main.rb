@@ -124,6 +124,9 @@ get '/contact' do
   erb :contact
 end
 
+get '/details' do
+  erb :details
+end
 
 
 
