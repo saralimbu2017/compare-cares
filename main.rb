@@ -8,20 +8,7 @@ require_relative 'models/aged_care_service'
 require_relative 'models/service'
 require_relative 'models/user'
 
-
 enable :sessions
-
-get '/' do
-  erb :index
-end
-
-get '/signup' do
-  erb :signup
-end
-
-get '/login' do
-  erb :login
-end
 
 get '/agedcares' do
   erb :agedcares
@@ -38,10 +25,21 @@ end
 
 
 after do
- ActiveRecord::Base.connection.close
+  ActiveRecord::Base.connection.close
 end 
 
 
+get '/' do
+  erb :index
+end
+
+get '/signup' do
+  erb :signup
+end
+
+get '/login' do
+  erb :login
+end
 
 
 
