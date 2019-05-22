@@ -23,7 +23,12 @@ end
 
 get '/services/:id' do
   @agedcares = AgedCare.find(params[:id])
+  if 
+
   # view the saved aged care info
+  
+  
+  
   erb :services_listing 
 
 end

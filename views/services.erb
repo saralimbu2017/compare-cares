@@ -1,25 +1,32 @@
-<form action="/services" method="post" >
-  <div class="services">
-    <div>
-      <label for="name">Name of Aged Care</label>
-      <input type="text" name="name" value="" />
-    </div>
-    <div>
-      <label for="location">Location</label>
-      <input type="text" name="location" value="" />
-    </div>
-    <div>
-      <label for="number">Monthly Cost</label>
-      <input type="number" name="cost" value="number" />
-    </div>
+<div class="container">
+  <div class="ui-services-container">
+    <form action="/services" method="post" >
+      <div class="aged-care-main">
+          <div>
+            <label class="title" for="name">Name of Aged Care:</label>
+            <input class="input-area" type="text" name="name" value="" />
+          </div>
+          <div>
+            <label class="title" for="location">Location:</label>
+            <input class="input-area" type="text" name="location" value="" />
+          </div>
+          <div>
+            <label class="title" for="number">Monthly Cost:</label>
+            <input class="input-area" type="number" name="cost" value="number" />
+          </div>
+        </div>
 
-    <legend>Select Your Aged Care Services</legend>
-    <% @services.each do |service| %>
-      <div>
-        <input type="checkbox" name="service-<%= service.name %>" value="<%= service.id %>" />
-        <label for="<%= service.name %>"><%= service.name %></label>
+        <div class="services-list">
+        <legend>Select Aged Care Services</legend>
+        <% @services.each do |service| %>
+          <div>
+            <input type="checkbox" name="service-<%= service.name %>" value="<%= service.id %>" />
+            <label for="<%= service.name %>"><%= service.name %></label>
+          </div>
+        <% end %>
+        </div>
+        <button type="submit">Submit</button>
       </div>
-    <% end %>
-    <button type="submit">Submit</button>
+    </form>
   </div>
-</form>
+</div>
