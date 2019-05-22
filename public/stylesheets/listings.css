@@ -5,16 +5,27 @@
   margin-top: 2rem;
   margin-left: 3rem;
   margin-right: 3rem;
-
+  /* display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between; */
   
+}
+.listings{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+}
+
+.agecare{
+  width:30%;
+  margin-top:5px;
 }
 .agecare-info{
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
-p .agecare-name{
-  width:100%
-}
+
 
 p .agecare-rating{
   width:50%
@@ -22,4 +33,22 @@ p .agecare-rating{
 
 p .agecare-cost{
   width:50%
+}
+
+.btn{
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.compare-btn{
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding:5px;
+}
+
+.clicked{
+  background-color:rgb(104, 97, 97);
+  padding: 0.5rem;
+  opacity: 0.8;
 }
