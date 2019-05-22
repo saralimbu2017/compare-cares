@@ -1,0 +1,25 @@
+.ui-listings-container{
+  width:90%;
+  height:100%;
+  background-color: mistyrose;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+
+  
+}
+.agecare-info{
+  display: flex;
+  flex-wrap: wrap;
+}
+p .agecare-name{
+  width:100%
+}
+
+p .agecare-rating{
+  width:50%
+}
+
+p .agecare-cost{
+  width:50%
+}

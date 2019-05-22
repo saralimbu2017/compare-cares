@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>compare care</title>
   <link rel="stylesheet" href="/stylesheets/main.css">
+  <link rel="stylesheet" href="/stylesheets/listings.css">
 </head>
 <body>
   <header class="ui-header">
@@ -13,12 +14,24 @@
       <div class="logo">
         <span >Compare Cares!</span>
       </div> 
+
+    <% if logged_in?()%>
+    <div class="user-control">
+      User: <%= current_user().email %>
+      <form action="/session" method="post">
+        <input type="hidden"name="_method" value="delete">
+        <button>logout</button>
+      </form>
+    
+    </div>
+
+    <% else %>
       <div class="user-control">
-        <span > 
         <a href="/signup">Sign Up</a>
         <a href="/login">Log In</a>
-        </span>
       </div>
+
+    <% end %>
     </div>
     <nav class="ui-menu">
       
@@ -27,6 +40,10 @@
        <div class="contact-menu">Contact Us</div>
     </nav>
   </header>
+
+
+  
+
      <%= yield %>
   <footer></footer>
   
