@@ -53,6 +53,11 @@ get '/agedcares' do
   erb :agedcares
 end
 
+get '/listings' do
+
+  erb :listings
+end
+
 post '/session' do
   user = User.find_by(email:params[:user_email])
   if user && user.authenticate(params[:user_password])
