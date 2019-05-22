@@ -36,6 +36,8 @@ post '/services' do
     aged_care_service.service_id = Service.find_by(name: name ).id
     aged_care_service.save
     rating = rating + 1
+
+    
   end
   agedcare.rating = rating
   agedcare.save
@@ -115,3 +117,8 @@ end
 get '/contact' do
   erb :contact
 end
+
+
+
+
+
