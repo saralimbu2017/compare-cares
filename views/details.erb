@@ -1,43 +1,19 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <div class="container">
   <div class="ui-listings-container">
-
-
     <div class="agecare">
-      <img src="https://www.agedcare101.com.au/the-donaldson-sisters/wp-content/uploads/2017/01/Kingsville-hero.jpg" alt="">
-      <div class="agecare-info">
-        <p class="agecare-name">Lily</p>
-        <p class="agecare-rating"> <span>6</span>/10</p>
-        <p class="agecare-cost">$ <span>1000</span></p>
-
-        <div class="service-container">
-          <div class="services">Food</div>
-          <div class="services">Room Size</div>
-          <div class="services">Phsio</div>
-          <div class="services">Gym</div>
-          <div class="services"></div>
-          <div class="services">Swimming Pool</div>
-          <div class="services">Bowling</div>
-          <div class="services">Internet</div>
-          <div class="services">Outings</div>
-          <div class="services">Movie Theatre</div>
-        </div>
-      </div>
-
-      <div>
-
-      </div>
-
-
-
-
-
-
-    </div>
-
-    
-
-
-    
+      <%= @aged_care_services[0][0] %>
+      <%= @aged_care_services[0][1] %>
+      <%= @aged_care_services[0][2] %>
+      
+      <% @aged_care_services.each do |service| %>
+        <div class="service"><i class="far fa-check-circle"></i> <%= service[3] %></div>
+      <% end %>
+    </div>    
   </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
