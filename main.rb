@@ -8,9 +8,7 @@ require_relative 'models/aged_care_service'
 require_relative 'models/service'
 require_relative 'models/user'
 require_relative 'routes/listings'
-
-
-
+require_relative 'routes/details'
 enable :sessions
 
 get '/agedcares' do
@@ -126,19 +124,7 @@ get '/contact' do
   erb :contact
 end
 
-get '/details/:id' do
-  
-  # How to turn the sql into ActiveRecord?
-  sql = "select b.name, b.location, b.cost, c.name
-  from aged_care_services a
-  join aged_cares b          on a.aged_care_id = b.id
-  join services c            on a.service_id = c.id
-  where a.aged_care_id = #{params[:id]}"
 
-  @aged_care_services = ActiveRecord::Base.connection.execute(sql).values
-
-  erb :details
-end
 
 
 
