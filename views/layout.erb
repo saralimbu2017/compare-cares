@@ -17,7 +17,7 @@
   <header class="ui-header">
     <div class="ui-intro">
       <div class="logo">
-        <span >Compare Cares!</span>
+        <span>Compare Cares!</span>
       </div> 
 
     <% if logged_in?()%>
@@ -46,11 +46,8 @@
     </nav>
   </header>
 
+  <%= yield %>
 
-  
-
-     <%= yield %>
   <footer></footer>
-  
 </body>
 </html>
