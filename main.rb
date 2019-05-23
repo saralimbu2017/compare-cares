@@ -100,7 +100,7 @@ post '/session' do
     session[:user_id] = user.id
     redirect '/services'
   else
-    erb :login
+    erb :login, :layout => :layout_listings
   end
   # @services = Service.all
   # erb :services

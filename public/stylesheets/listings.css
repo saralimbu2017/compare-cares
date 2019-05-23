@@ -39,8 +39,9 @@ p .agecare-cost {
   justify-content: space-between;
 }
 
-.compare-btn, .detail-btn {
+.compare-btn, .detail-btn, .submit-btn {
   /* border-radius: 5px; */
+  margin-left: 20px;
   margin-bottom: 20px;
   /* padding:5px; */
 
