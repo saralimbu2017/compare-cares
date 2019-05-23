@@ -8,9 +8,7 @@ require_relative 'models/aged_care_service'
 require_relative 'models/service'
 require_relative 'models/user'
 require_relative 'routes/listings'
-
-
-
+require_relative 'routes/details'
 enable :sessions
 
 get '/agedcares' do
@@ -38,7 +36,6 @@ post '/services' do
     aged_care_service.service_id = Service.find_by(name: name ).id
     aged_care_service.save
     rating = rating + 1
-
   end
   agedcare.rating = rating
   agedcare.save
@@ -50,9 +47,7 @@ get '/services/:id' do
   erb :services_listing 
 end
 
-
 helpers do
-
   def current_user
     User.find_by(id:session[:user_id])
   end 
@@ -71,7 +66,6 @@ after do
 end 
 
 get '/' do
-  
   erb :index
 end
 
@@ -96,8 +90,6 @@ get '/agedcares' do
   erb :agedcares
 end
 
-
-
 post '/session' do
   user = User.find_by(email:params[:user_email])
   if user && user.authenticate(params[:user_password])
@@ -112,11 +104,9 @@ post '/session' do
 end
 
 delete '/session' do
- 
   session[:user_id] = nil
   redirect "/login"
 end
-
 
 get '/about' do
   erb :about
@@ -125,8 +115,3 @@ end
 get '/contact' do
   erb :contact
 end
-
-
-
-
-
