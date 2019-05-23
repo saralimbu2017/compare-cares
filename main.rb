@@ -83,8 +83,9 @@ post '/signup' do
   user.email = params[:user_email]
   user.password = params[:user_password]
   user.save
-  @services = Service.all
-  erb :services
+  session[:user_id] = user.id
+  redirect '/services'
+  
 end
 
 get '/login' do
@@ -99,8 +100,7 @@ post '/session' do
   user = User.find_by(email:params[:user_email])
   if user && user.authenticate(params[:user_password])
     session[:user_id] = user.id
-    @services = Service.all
-    erb :services
+    redirect '/services'
   else
     erb :login
   end
