@@ -9,7 +9,6 @@ require_relative 'models/aged_care'
 require_relative 'models/aged_care_service'
 require_relative 'models/service'
 require_relative 'models/user'
-require_relative 'routes/listings'
 
 
 

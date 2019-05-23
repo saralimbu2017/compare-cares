@@ -8,14 +8,11 @@ require_relative 'models/aged_care_service'
 require_relative 'models/service'
 require_relative 'models/user'
 require_relative 'routes/listings'
-<<<<<<< HEAD
 require_relative 'routes/details'
-=======
 require_relative 'routes/compare'
 
 
 
->>>>>>> listing updated
 enable :sessions
 
 get '/agedcares' do
@@ -39,12 +36,11 @@ post '/services' do
   services = params["service"]
   services.each do |name, id|
     aged_care_service = AgedCareService.new
-    @aged_care_service.aged_care_id = agedcare.id
+    aged_care_service.aged_care_id = agedcare.id
     aged_care_service.service_id = Service.find_by(name: name ).id
     aged_care_service.save
     rating = rating + 1
-
-    
+  
   end
   agedcare.rating = rating
   agedcare.save
