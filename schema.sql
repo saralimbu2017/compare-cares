@@ -31,16 +31,16 @@ CREATE TABLE services(
   name TEXT
 );
 
-INSERT INTO services(name) VALUES ('food');
-INSERT INTO services(name) VALUES ('room');
-INSERT INTO services(name) VALUES ('physio_therapy');
-INSERT INTO services(name) VALUES ('gym');
-INSERT INTO services(name) VALUES ('housekeeping');
-INSERT INTO services(name) VALUES ('movie_theatre');
-INSERT INTO services(name) VALUES ('swimming_pool');
-INSERT INTO services(name) VALUES ('outings');
-INSERT INTO services(name) VALUES ('bowling');
-INSERT INTO services(name) VALUES ('library_internet');
+INSERT INTO services(name) VALUES ('Food');
+INSERT INTO services(name) VALUES ('Room');
+INSERT INTO services(name) VALUES ('Physio Therapy');
+INSERT INTO services(name) VALUES ('Gym');
+INSERT INTO services(name) VALUES ('Housekeeping');
+INSERT INTO services(name) VALUES ('Movie Theatre');
+INSERT INTO services(name) VALUES ('Swimming Pool');
+INSERT INTO services(name) VALUES ('Outings');
+INSERT INTO services(name) VALUES ('Bowling');
+INSERT INTO services(name) VALUES ('Library and Internet');
 
 33
 -- bridging table for agedcare and services due to many to many relationship

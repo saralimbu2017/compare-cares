@@ -27,16 +27,21 @@ post '/services' do
   agedcare.name = params[:name]
   agedcare.location = params[:location]
   agedcare.cost = params[:cost]
+  agedcare.user_id = current_user.id
   agedcare.save
 
+  rating = 0
   services = params["service"]
   services.each do |name, id|
     aged_care_service = AgedCareService.new
     @aged_care_service.aged_care_id = agedcare.id
     aged_care_service.service_id = Service.find_by(name: name ).id
     aged_care_service.save
-    
+    rating = rating + 1
+
   end
+  agedcare.rating = rating
+  agedcare.save
   redirect '/'
 end
 
