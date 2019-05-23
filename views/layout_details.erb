@@ -39,11 +39,14 @@
     </div>
 
     <nav class="ui-menu">
-      <div class="menu">
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/contact">Contact Us</a>
-       </div>
+       <div class="home-menu"> <a href="/"><i class="fas fa-home"></i> Home</a> </div>        
+      <% if logged_in?()%>
+        <div class="service-menu"> <a href="/services"><i class="fas fa-concierge-bell"></i> Services</a></div> 
+      <% else %>  
+        <div class="service-menu"> <a href="/login"><i class="fas fa-concierge-bell"></i> Services</a></div>         
+      <% end %>
+       <div class="about-menu"> <a href="/about"><i class="far fa-address-card"></i> About</a></div> 
+       <div class="contact-menu"><a href="/contact"><i class="fas fa-phone"></i> Contact Us</a></div>
     </nav>
   </header>
 
