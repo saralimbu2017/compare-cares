@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
 }
+
 img {
   width: 100%;
 }
@@ -29,11 +30,12 @@ body {
 
 .user-control {
   margin-left: 70%;
+  color: #007bff;
 }
 
-.user-control a {
+/* .user-control a {
   margin-right: 10px;
-}
+} */
 
 .ui-menu {
   width: 100%;
@@ -130,6 +132,13 @@ img.star {
   padding: 0;
   width: 20%;
 }
+
 .search-form {
   text-align: center;
+}
+
+.logout-button {
+  border: none; 
+  background-color: white;
+  color: #007bff;
 }

@@ -5,17 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>compare care</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  
   <link rel="stylesheet" href="/stylesheets/main.css">
+  <link rel="stylesheet" href="/stylesheets/services.css">
   <link rel="stylesheet" href="/stylesheets/listings.css">
   <link rel="stylesheet" href="/stylesheets/services.css">
-  <link rel="stylesheet" href="/stylesheets/details.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheets/details.css">  
 </head>
 <body>
   <header class="ui-header">
     <div class="ui-intro">
       <div class="logo">
-        <span><img src="https://i.imgur.com/f9PAdqn.png?1" alt="logo"></span>
+        <span><img class="logo-img" src="https://i.imgur.com/f9PAdqn.png?1" alt="logo"></span>
       </div> 
 
       <% if logged_in?()%>
@@ -23,7 +26,7 @@
           User: <%= current_user().email %>
           <form action="/session" method="post">
             <input type="hidden"name="_method" value="delete">
-             <i class="fas fa-sign-out-alt"></i> <button>logout</button>
+             <button class="logout-button"><i class="fas fa-sign-out-alt"></i> logout</button>
           </form>
         </div>
 

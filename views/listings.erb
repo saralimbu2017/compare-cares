@@ -4,7 +4,7 @@
     <p>Location: <%= @location %></p>
     <form action="/compares" method="post">
       <input type="hidden" name="ids_selected" value="" class="agecare-ids">
-      <button class="compare-btn">COMPARE</button>
+      <button class="compare-btn">Compare</button>
     
     </form>
     
@@ -16,10 +16,6 @@
       <div class="agecare" data-id="<%= agecare.id %>">
         <img src="images/download.jpeg" alt="">
         <p class="agecare-name"><%= agecare.name %></p>
-        <div class="agecare-info">
-          <p class="agecare-rating"> Ratings: <span> <%= agecare.rating %></span>/10</p>
-          <p class="agecare-cost">Cost: $ <span><%= agecare.cost %></span></p>
-        </div>
       </div>
     <% end %>
       

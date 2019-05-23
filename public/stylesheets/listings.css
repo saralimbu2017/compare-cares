@@ -9,6 +9,7 @@
   flex-wrap: wrap;
   justify-content: space-between; */
 }
+
 .listings {
   display: flex;
   flex-wrap: wrap;
@@ -38,7 +39,7 @@ p .agecare-cost {
   justify-content: space-between;
 }
 
-.compare-btn {
+.compare-btn, .detail-btn {
   /* border-radius: 5px; */
   margin-bottom: 20px;
   /* padding:5px; */

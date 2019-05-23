@@ -24,7 +24,7 @@
   <header class="ui-header">
     <div class="ui-intro">
       <div class="logo">
-        <span><img src="https://i.imgur.com/f9PAdqn.png?1" alt="logo"></span>
+        <span><img class="logo-img" src="https://i.imgur.com/f9PAdqn.png?1" alt="logo"></span>
       </div> 
 
     <% if logged_in?()%>
@@ -32,9 +32,8 @@
       User: <%= current_user().email %>
       <form action="/session" method="post">
         <input type="hidden"name="_method" value="delete">
-        <i class="fas fa-sign-out-alt"></i> <button>logout</button>
+        <button class="logout-button"><i class="fas fa-sign-out-alt"></i> logout</button>
       </form>
-    
     </div>
 
     <% else %>
