@@ -8,7 +8,14 @@ require_relative 'models/aged_care_service'
 require_relative 'models/service'
 require_relative 'models/user'
 require_relative 'routes/listings'
+<<<<<<< HEAD
 require_relative 'routes/details'
+=======
+require_relative 'routes/compare'
+
+
+
+>>>>>>> listing updated
 enable :sessions
 
 get '/agedcares' do
@@ -72,7 +79,7 @@ get '/' do
 end
 
 get '/signup' do
-  erb :signup
+  erb :signup  
 end
 
 post '/signup' do
@@ -117,7 +124,6 @@ end
 get '/contact' do
   erb :contact
 end
-
 
 
 
