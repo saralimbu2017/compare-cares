@@ -42,7 +42,7 @@ p .agecare-cost{
 }
 
 
-.compare-btn{
+.compare-btn, .detail-btn {
   /* border-radius: 5px; */
   margin-bottom: 20px;
   /* padding:5px; */
