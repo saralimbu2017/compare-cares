@@ -25,13 +25,13 @@ INSERT INTO aged_cares(name, location, cost, rating)
 VALUES ('Palmy Aged Care', 'North Melbourne', 105076, 7);
 
 INSERT INTO aged_care_services(aged_care_id, service_id)
-VALUES (5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6), (5, 7),
+VALUES (5, 1), (5, 2), (5, 3), (5, 4), (5, 5), (5, 6), (5, 7);
 
 INSERT INTO aged_cares(name, location, cost, rating) 
 VALUES ('We Care', 'South Melbourne', 423640, 7);
 
 INSERT INTO aged_care_services(aged_care_id, service_id)
-VALUES (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6), (6, 7),
+VALUES (6, 1), (6, 2), (6, 3), (6, 4), (6, 5), (6, 6), (6, 7);
 
 INSERT INTO aged_cares(name, location, cost, rating) 
 VALUES ('Shady Oaks Resthome', 'South Melbourne', 766547, 10);
@@ -49,7 +49,8 @@ INSERT INTO aged_cares(name, location, cost, rating)
 VALUES ('Pine Retirement Village', 'South Melbourne', 230870, 6);
 
 INSERT INTO aged_care_services(aged_care_id, service_id)
-VALUES (8, 1), (8, 2), (8, 3), (8, 4), (8, 5), (8, 6)
+VALUES (8, 1), (8, 2), (8, 3), (8, 4), (8, 5), (8, 6);
 
 INSERT INTO aged_cares(name, location, cost, rating) 
 VALUES ('Seaview Aged Care', 'South Melbourne', 765094, 8);
+

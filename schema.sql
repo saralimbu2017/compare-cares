@@ -42,7 +42,7 @@ INSERT INTO services(name) VALUES ('Outings');
 INSERT INTO services(name) VALUES ('Bowling');
 INSERT INTO services(name) VALUES ('Library and Internet');
 
-33
+
 -- bridging table for agedcare and services due to many to many relationship
 CREATE TABLE aged_care_services(
   aged_care_id INTEGER,
