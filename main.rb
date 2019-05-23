@@ -7,6 +7,9 @@ require_relative 'models/aged_care'
 require_relative 'models/aged_care_service'
 require_relative 'models/service'
 require_relative 'models/user'
+require_relative 'routes/listings'
+
+
 
 enable :sessions
 
@@ -88,10 +91,7 @@ get '/agedcares' do
   erb :agedcares
 end
 
-get '/listings' do
 
-  erb :listings
-end
 
 post '/session' do
   user = User.find_by(email:params[:user_email])
@@ -121,11 +121,7 @@ get '/contact' do
   erb :contact
 end
 
-post '/listings' do 
-  @location = params['location']
-  erb :listings
 
-end
 
 
 
