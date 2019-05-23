@@ -43,9 +43,22 @@ p .agecare-cost{
 
 
 .compare-btn{
-  border-radius: 5px;
+  /* border-radius: 5px; */
   margin-bottom: 20px;
-  padding:5px;
+  /* padding:5px; */
+  
+  
+  /* width:100px; */
+  background-color: rgb(38,42,100); 
+  color: white;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  padding:5px 15px;
+  
 }
 
 .clicked{
