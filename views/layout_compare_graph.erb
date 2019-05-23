@@ -19,7 +19,7 @@
   <header class="ui-header">
     <div class="ui-intro">
       <div class="logo">
-        <span >Compare Cares!</span>
+        <span><img src="https://i.imgur.com/f9PAdqn.png?1" alt="logo"></span>
       </div> 
 
     <% if logged_in?()%>
@@ -27,15 +27,14 @@
       User: <%= current_user().email %>
       <form action="/session" method="post">
         <input type="hidden"name="_method" value="delete">
-        <button>logout</button>
+         <i class="fas fa-sign-out-alt"></i> <button>logout</button>
       </form>
-    
     </div>
 
     <% else %>
       <div class="user-control">
-        <a href="/signup">Sign Up</a>
-        <a href="/login">Log In</a>
+        <a href="/signup"><i class="far fa-envelope"></i> Sign Up</a>
+          <a href="/login"><i class="fas fa-sign-in-alt"></i> Log In</a>
       </div>
 
     <% end %>

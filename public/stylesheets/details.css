@@ -8,10 +8,27 @@
 }
 
 img {
-  width: 40%;
+  width: 20%;
+  margin-top: 2rem;
 }
 
 .service-container {
   display: flex;
   flex-direction: column;
+}
+
+.ui-header {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
+
+.ui-menu a{
+  color: white;
+  margin-left: 2rem;
+}
+
+.ui-intro {
+  margin: 0;
+  /* font-weight: bold; */
 }
