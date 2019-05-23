@@ -10,9 +10,7 @@ require_relative 'models/user'
 require_relative 'routes/listings'
 require_relative 'routes/details'
 require_relative 'routes/compare'
-
-
-
+require_relative 'routes/compare_graph'
 enable :sessions
 
 get '/agedcares' do
@@ -75,7 +73,7 @@ get '/' do
 end
 
 get '/signup' do
-  erb :signup  
+  erb :signup, :layout => :layout_listings
 end
 
 post '/signup' do
@@ -89,7 +87,7 @@ post '/signup' do
 end
 
 get '/login' do
-  erb :login
+  erb :login, :layout => :layout_listings
 end
 
 get '/agedcares' do
