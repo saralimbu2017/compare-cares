@@ -5,29 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>compare care</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/stylesheets/main.css">
-
-  
-  <link rel="stylesheet" href="/stylesheets/services.css">
-
-  <link rel="stylesheet" href="/stylesheets/login.css">
-  <link rel="stylesheet" href="/stylesheets/signup.css">
-
   <link rel="stylesheet" href="/stylesheets/listings.css">
   <link rel="stylesheet" href="/stylesheets/services.css">
-  <link rel="stylesheet" href="/stylesheets/details.css">
-<<<<<<< Updated upstream
-=======
+  <link rel="stylesheet" href="/stylesheets/compare.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
->>>>>>> Stashed changes
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
   <header class="ui-header">
     <div class="ui-intro">
       <div class="logo">
-        <span>Compare Cares!</span>
+        <span >Compare Cares!</span>
       </div> 
 
     <% if logged_in?()%>
@@ -50,14 +39,17 @@
     </div>
     <nav class="ui-menu">
       
-       <div class="home-menu"> <a href="/">Home</a> </div> 
-       <div class="about-menu"> <a href="/about">About</a></div> 
-       <div class="contact-menu"><a href="/contact">Contact Us</a></div>
+       <div class="home-menu">Home</div> 
+       <div class="about-menu">About</div> 
+       <div class="contact-menu">Contact Us</div>
     </nav>
   </header>
 
-  <%= yield %>
 
+  
+
+     <%= yield %>
   <footer></footer>
+  
 </body>
 </html>

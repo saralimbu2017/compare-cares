@@ -19,7 +19,7 @@
             <div class="aged_care_content"> 
               <table>
                 <tr>
-                  <td>Ratings</td><td><p><%=aged_care.rating%> / 10</p></td>
+                  <td>Rating</td><td><p><%=aged_care.rating%> / 10</p></td>
                 </tr>
                 <tr>
                   <td>Cost</td><td><p>$<%=aged_care.cost%></p></td>
@@ -49,31 +49,21 @@
           </div>
         </div>
       <%end%>
-     
-            <%# <div  class="component">
-              <img src="/images/cover.jpg" alt="" data-name="component2">
-              <div class="ui-compare-component div2" >
-                <input class="cancel-icon" type="image" name="submit" src="/images/cancel.png"  alt="Submit" style="width: 30px;" /> 
-              
-              </div>
-            </div>
-            <div  class="component">
-              <img src="/images/cover.jpg" alt="" data-name="component3">
-                <div class="ui-compare-component div3" >
-                  <input class="cancel-icon" type="image" name="submit" src="/images/cancel.png"  alt="Submit" style="width: 30px;" /> 
-              
-                </div>
-          </div> %>
-    </div> 
+    </div>
+    <div class="ui-graph">
+        <canvas id="myChart"></canvas>
+
+  </div>  
+  </div>
+  
    <script>
       $('.ui-compare-wrapper').on('click', function(event) {
-        //var name = $(event.target).closest('div').data('name');
-        //$(event.target).closest('div').remove();
         $(event.target).closest('.component').remove();
 
         
         
       });
     </script>
-  </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+  
 </div>
