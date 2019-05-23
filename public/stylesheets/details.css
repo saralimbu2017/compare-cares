@@ -20,6 +20,7 @@ img {
 .ui-header {
   display: flex;
   justify-content: space-around;
+  font-weight: bold;
 }
 
 .ui-menu a{
@@ -29,4 +30,5 @@ img {
 
 .ui-intro {
   margin: 0;
+  /* font-weight: bold; */
 }

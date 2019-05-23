@@ -17,17 +17,14 @@
   <link rel="stylesheet" href="/stylesheets/listings.css">
   <link rel="stylesheet" href="/stylesheets/services.css">
   <link rel="stylesheet" href="/stylesheets/details.css">
-<<<<<<< Updated upstream
-=======
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
->>>>>>> Stashed changes
 </head>
 <body>
   <header class="ui-header">
     <div class="ui-intro">
       <div class="logo">
-        <span>Compare Cares!</span>
+        <span><img src="https://i.imgur.com/f9PAdqn.png?1" alt="logo"></span>
       </div> 
 
     <% if logged_in?()%>
@@ -35,15 +32,15 @@
       User: <%= current_user().email %>
       <form action="/session" method="post">
         <input type="hidden"name="_method" value="delete">
-        <button>logout</button>
+        <i class="fas fa-sign-out-alt"></i> <button>logout</button>
       </form>
     
     </div>
 
     <% else %>
       <div class="user-control">
-        <a href="/signup">Sign Up</a>
-        <a href="/login">Log In</a>
+        <a href="/signup"><i class="far fa-envelope"></i> Sign Up</a>
+        <a href="/login"><i class="fas fa-sign-in-alt"></i> Log In</a>
       </div>
 
     <% end %>
