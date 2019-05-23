@@ -1,4 +1,5 @@
 class AgedCareService < ActiveRecord::Base
-  has_many :agedcares
-  has_many :services
+  belongs_to :aged_care
+  belongs_to :service
 end
+

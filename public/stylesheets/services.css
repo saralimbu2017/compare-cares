@@ -1,6 +1,18 @@
+.body-image {
+  background-image: url("https://livingchoice.cachefly.net/wp-content/uploads/2017/07/Twin-waters-retirement-village.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .container {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%; */
+  /* background-image: url("https://www.applewood.com.au/static/uploads/images/retirement-village-doncaster-wfizdfyqisxx.jpg?height=700&mode=max&upscale=false&width=1920");
+  background-repeat: no-repeat;
+  background-size: cover; */
   justify-content: center;
   width: 100%;
   height: 100%;
@@ -32,4 +44,8 @@
 
 .services-list {
   margin: 2rem;
+}
+
+.btn-primary {
+  margin: 1rem;
 }
