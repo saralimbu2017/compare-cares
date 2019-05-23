@@ -7,6 +7,9 @@ require_relative 'models/aged_care'
 require_relative 'models/aged_care_service'
 require_relative 'models/service'
 require_relative 'models/user'
+require_relative 'routes/listings'
+
+
 
 enable :sessions
 
@@ -31,10 +34,11 @@ post '/services' do
   services = params["service"]
   services.each do |name, id|
     aged_care_service = AgedCareService.new
-    aged_care_service.aged_care_id = agedcare.id
+    @aged_care_service.aged_care_id = agedcare.id
     aged_care_service.service_id = Service.find_by(name: name ).id
     aged_care_service.save
     rating = rating + 1
+
   end
   agedcare.rating = rating
   agedcare.save
@@ -67,6 +71,7 @@ after do
 end 
 
 get '/' do
+  
   erb :index
 end
 
@@ -91,10 +96,7 @@ get '/agedcares' do
   erb :agedcares
 end
 
-get '/listings' do
 
-  erb :listings
-end
 
 post '/session' do
   user = User.find_by(email:params[:user_email])

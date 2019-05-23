@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>compare care</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <link rel="stylesheet" href="/stylesheets/listings.css">
+  <link rel="stylesheet" href="/stylesheets/services.css">
+  <link rel="stylesheet" href="/stylesheets/login.css">
+
+  <link rel="stylesheet" href="/stylesheets/signup.css">
+</head>
+<body>
+  <header class="ui-header">
+    <div class="ui-intro">
+      <div class="logo">
+        <span >Compare Cares!</span>
+      </div> 
+
+    <% if logged_in?()%>
+    <div class="user-control">
+      User: <%= current_user().email %>
+      <form action="/session" method="post">
+        <input type="hidden"name="_method" value="delete">
+        <button>logout</button>
+      </form>
+    
+    </div>
+
+    <% else %>
+      <div class="user-control">
+        <a href="/signup">Sign Up</a>
+        <a href="/login">Log In</a>
+      </div>
+
+    <% end %>
+    </div>
+    <nav class="ui-menu">
+      
+       <div class="home-menu"> <a href="/">Home</a> </div> 
+       <div class="about-menu"> <a href="/about">About</a></div> 
+       <div class="contact-menu"><a href="/contact">Contact Us</a></div>
+    </nav>
+  </header>
+
+
+  
+
+     <%= yield %>
+  <footer></footer>
+  
+</body>
+</html>

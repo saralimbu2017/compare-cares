@@ -1,0 +1,18 @@
+.login-container{
+  
+}
+
+.ui-login-container{
+  width: 100%;
+  padding: 0 30%;
+  margin-top: 5px;
+  
+}
+
+.ui-login-container h1,p{
+  text-align: center;
+}
+
+.ui-login-container h1{
+  color:#007bff;
+}
