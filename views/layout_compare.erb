@@ -5,18 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>compare care</title>
-  <link rel="stylesheet" href="/stylesheets/main.css">
-  <link rel="stylesheet" href="/stylesheets/listings.css">
-  <link rel="stylesheet" href="/stylesheets/services.css">
-  <link rel="stylesheet" href="/stylesheets/compare.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  
+  <link rel="stylesheet" href="/stylesheets/main.css">
+  <link rel="stylesheet" href="/stylesheets/services.css">
+  <link rel="stylesheet" href="/stylesheets/listings.css">
+
+  <link rel="stylesheet" href="/stylesheets/compare.css">
+  <link rel="stylesheet" href="/stylesheets/services.css">
+  <link rel="stylesheet" href="/stylesheets/details.css">
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 <body>
   <header class="ui-header">
     <div class="ui-intro">
       <div class="logo">
-        <span >Compare Cares!</span>
+        <span><img class="logo-img" src="https://i.imgur.com/f9PAdqn.png?1" alt="logo"></span>
       </div> 
 
     <% if logged_in?()%>
@@ -24,24 +29,28 @@
       User: <%= current_user().email %>
       <form action="/session" method="post">
         <input type="hidden"name="_method" value="delete">
-        <button>logout</button>
+        <button class="logout-button"><i class="fas fa-sign-out-alt"></i> logout</button>
       </form>
     
     </div>
 
     <% else %>
       <div class="user-control">
-        <a href="/signup">Sign Up</a>
-        <a href="/login">Log In</a>
+          <a href="/signup"><i class="far fa-envelope"></i> Sign Up</a>
+          <a href="/login"><i class="fas fa-sign-in-alt"></i> Log In</a>
       </div>
 
     <% end %>
     </div>
     <nav class="ui-menu">
-      
-       <div class="home-menu">Home</div> 
-       <div class="about-menu">About</div> 
-       <div class="contact-menu">Contact Us</div>
+       <div class="home-menu"> <a href="/"><i class="fas fa-home"></i> Home</a> </div>        
+      <% if logged_in?()%>
+        <div class="service-menu"> <a href="/services"><i class="fas fa-concierge-bell"></i> Services</a></div> 
+      <% else %>  
+        <div class="service-menu"> <a href="/login"><i class="fas fa-concierge-bell"></i> Services</a></div>         
+      <% end %>
+       <div class="about-menu"> <a href="/about"><i class="far fa-address-card"></i> About</a></div> 
+       <div class="contact-menu"><a href="/contact"><i class="fas fa-phone"></i> Contact Us</a></div>
     </nav>
   </header>
 

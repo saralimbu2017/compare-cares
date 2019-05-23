@@ -28,11 +28,12 @@ body {
 
 .user-control {
    margin-left: 70%;
+   color: #007bff;
 }
 
-.user-control a {
+/* .user-control a {
   margin-right: 10px;
-}
+} */
 
 .ui-menu {
   width:100%;
@@ -91,4 +92,10 @@ body {
 
 .search-input::placeholder {
   font-size: 16pt;
+}
+
+.logout-button {
+  border: none; 
+  background-color: white;
+  color: #007bff;
 }
