@@ -15,30 +15,28 @@
   <header class="ui-header">
     <div class="ui-intro">
       <div class="logo">
-        <span>Compare Cares!</span>
+        <span><img src="https://i.imgur.com/f9PAdqn.png?1" alt="logo"></span>
       </div> 
 
-    <% if logged_in?()%>
-    <div class="user-control">
-      User: <%= current_user().email %>
-      <form action="/session" method="post">
-        <input type="hidden"name="_method" value="delete">
-        <button>logout</button>
-      </form>
-    
+      <% if logged_in?()%>
+        <div class="user-control">
+          User: <%= current_user().email %>
+          <form action="/session" method="post">
+            <input type="hidden"name="_method" value="delete">
+            <button>logout</button>
+          </form>
+        </div>
+
+      <% else %>
+        <div class="user-control">
+          <a href="/signup"><i class="far fa-envelope"></i> Sign Up</a>
+          <a href="/login"><i class="fas fa-sign-in-alt"></i> Log In</a>
+        </div>
+      <% end %>
     </div>
 
-    <% else %>
-      <div class="user-control">
-        <a href="/signup">Sign Up</a>
-        <a href="/login">Log In</a>
-      </div>
-
-    <% end %>
-    </div>
     <nav class="ui-menu">
-      
-       <div class="menu">
+      <div class="menu">
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/contact">Contact Us</a>
