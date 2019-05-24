@@ -15,9 +15,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   width:100%;
-  /* background-image: url('/images/header5.jpeg');
-  background-size: cover; 
-  background-repeat: no-repeat;  */
   /* height: 100%; */
 }
 
@@ -32,11 +29,6 @@ body {
  align-items: flex-end;
 }
 
-.logo img{
-  
-  opacity: 0.5;
-  
-}
 
 .user-control {
   display: flex;
@@ -63,6 +55,10 @@ body {
 
 }
 
+.logo{
+  width:20%;
+}
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -70,6 +66,7 @@ body {
   height: 100%; 
 }
 
+/* style for index page  */
 .ui-index-container {
  
   width:100%;
@@ -106,6 +103,3 @@ body {
   font-size: 16pt;
 }
 
-.logo{
-  width:20%;
-}
