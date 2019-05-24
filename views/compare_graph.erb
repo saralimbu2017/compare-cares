@@ -5,70 +5,71 @@
         <div  class="component">
           <img src="/images/cover.jpg" alt="" data-name="component1">
           <div class="ui-compare-component " >
-           
             <div class="intro-component">
               <div class="intro-name">
                 <p class="aged_care_name"><%=aged_care.name%></p>
               </div>
-              <div class="intro-icon"> 
+              <div class="intro-icon">
                 <span class="cancel-icon-span">
-                  <input class="cancel-icon" type="image" name="submit" src="/images/cancel.png"  alt="Submit" style="width: 10px;" /> 
+                  <input class="cancel-icon" type="image" name="submit" src="/images/cancel.png"  alt="Submit" style="width: 10px;" />
                 </span>
               </div>
             </div>
-            <div class="aged_care_content"> 
+            <div class="aged_care_content">
               <table>
                 <tr>
-                  <td >Rating</td><td><p class="rating"><%=aged_care.rating%></p>/ 10</td>
+                  <td >Rating</td>
+                  <td>
+                    <p class="rating"><%=aged_care.rating%></p>
+                    / 10</td>
                 </tr>
                 <tr>
-                  <td>Cost</td><td>$<p class="cost"><%=aged_care.cost%></p></td>
+                  <td>Cost</td>
+                  <td>$
+                    <p class="cost"><%=aged_care.cost%></p>
+                  </td>
                 </tr>
-                 <tr>
-                  <td>Location</td><td><p><%=aged_care.location%></p></td>
+                <tr>
+                  <td>Location</td>
+                  <td>
+                    <p><%=aged_care.location%></p>
+                  </td>
                 </tr>
                 <tr>
                   <td colspan="2"></td>
                 </tr>
-                  <tr>
+                <tr>
                   <td colspan="2"><b>Services</b></td>
                 </tr>
                 <% @services_records = AgedCareService.where(aged_care_id: aged_care.id)%>
                 <% @services_records.each do |record|%>
                   <%service = Service.find_by(id: record.service_id)%>
                   <tr>
-                  <td colspan="2"><p>
-                  <%# <span class="circle-icon"><i class="fas fa-circle"></i></span> %>
-                  <%= service.name%></p></td>
-                </tr>
-                  
+                    <td colspan="2">
+                      <p>
+                        <%# <span class="circle-icon"><i class="fas fa-circle"></i></span> %>
+                        <%= service.name%></p>
+                    </td>
+                  </tr>
                 <% end%>
               </table>
             </div>
             <button class="btn-detail"><a href="/details/<%= aged_care.id %>">Details</a> </button>
           </div>
-           
-                
-         
         </div>
       <%end%>
-      
     </div>
     <div class="ui-graph">
       <div class="canvasRating">
         <canvas id="ratingChart">
-         
         </canvas>
       </div>
       <div class="canvasCost">
         <canvas id="costChart">
-         
         </canvas>
       </div>
-  </div>  
+    </div>
   </div>
-  
-    <%# <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script> %>
-    <script>
-    </script>
+  <%# <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script> %>
+  <script></script>
 </div>
