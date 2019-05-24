@@ -7,10 +7,10 @@
   margin-right: 3rem;
 }
 
-.logo-img {
+/* .logo-img {
   width: 20%;
   margin-top: 2rem;
-}
+} */
 
 .service-container {
   display: flex;
@@ -23,7 +23,8 @@
   font-weight: bold;
 }
 
-.ui-menu a {
+.ui-menu a{
+  font-size: 1.5rem;
   color: white;
   margin-left: 2rem;
 }
