@@ -1,7 +1,7 @@
-.ui-listings-container{
-  width:90%;
-  height:100%;
-  background-color:rgb(248, 246, 245);
+.ui-listings-container {
+  width: 90%;
+  height: 100%;
+  background-color: rgb(248, 246, 245);
   margin-top: 2rem;
   margin-left: 3rem;
   margin-right: 3rem;
@@ -23,7 +23,7 @@ img {
   font-weight: bold;
 }
 
-.ui-menu a{
+.ui-menu a {
   color: white;
   margin-left: 2rem;
 }
