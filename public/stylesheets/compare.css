@@ -80,3 +80,20 @@
   padding-bottom: 20px;
   color: rgb(43, 41, 41);
 }
+
+.ui-graph {
+  display: flex;
+  flex-wrap: wrap;
+  width: 35%;
+  height: 100%;
+  align-content: stretch;
+  background-color: rgb(240, 235, 238);
+}
+.canvasRating {
+  width: 100%;
+}
+
+.canvasCost {
+  width: 100%;
+  height: 400px;
+}

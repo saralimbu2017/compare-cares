@@ -56,17 +56,16 @@
                 <% end%>
               </table>
             </div>
-            <%# <button class="detail-btn"><a href="/details/<%= aged_care.id">Details</a> </button> %>
+            <button class="btn-detail"><a href="/details/<%= aged_care.id %>">Details</a> </button>
           </div>
         </div>
       <%end%>
-
-    </div> 
-   <script>
+    </div>
+    <script>
       $('.ui-compare-wrapper').on('click', function(event) {
         //var name = $(event.target).closest('div').data('name');
         //$(event.target).closest('div').remove();
-        $(event.target).closest('.component').hide(00,function(){ 
+        $(event.target).closest('.component').hide(00,function(){
                $(event.target).closest('.component').remove();
                let length=$('.component').length;
                if(length==2){
@@ -75,12 +74,30 @@
                 if(length==1){
                  $('.component').css('width',"90%");
                }
-               }); 
-
-        
-        
+               });
+      
+      
+      
       });
-
+      
+          </div>
+          <div class="ui-graph">
+      <div class="canvasRating">
+        <canvas id="ratingChart">
+        </canvas>
+      </div>
+      <div class="canvasCost">
+        <canvas id="costChart">
+        </canvas>
+      </div>
+          </div>
+          <script>
+      $('.ui-compare-wrapper').on('click', function(event) {
+        //var name = $(event.target).closest('div').data('name');
+        //$(event.target).closest('div').remove();
+        $(event.target).closest('.component').remove();
+      
+      });
     </script>
   </div>
 </div>
