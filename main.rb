@@ -83,7 +83,7 @@ post '/signup' do
   user.save
   session[:user_id] = user.id
   redirect '/services'
-  
+  #erb :signup
 end
 
 get '/login' do
