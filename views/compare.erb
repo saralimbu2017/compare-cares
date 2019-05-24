@@ -58,7 +58,16 @@
       $('.ui-compare-wrapper').on('click', function(event) {
         //var name = $(event.target).closest('div').data('name');
         //$(event.target).closest('div').remove();
-        $(event.target).closest('.component').remove();
+        $(event.target).closest('.component').hide(00,function(){ 
+               $(event.target).closest('.component').remove();
+              //  let length=$('.component').length;
+              //  if(length==2){
+              //    $('.component').css('width',"45%");s
+              //  }
+              //   if(length==1){
+              //    $('.component').css('width',"90%");
+              //  }
+               }); 
 
         
         

@@ -1,19 +1,96 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="http://maps.googleapis.com/maps/api/js?key=<%= ENV["GOOGLEAPIKEY"] %>&sensor=false"></script>
+
+<script>
+
+    function addMap(lon,lat)
+    {
+    var map;
+    var myCenter=new google.maps.LatLng(lat,lon);
+    // var location = document.querySelector("#googleMap").className
+    function initialize()
+    { // set google map property
+      var mapProp = {
+        center:myCenter,
+        zoom:10,
+        mapTypeId:google.maps.MapTypeId.ROADMAP
+      };
+    // obtain map div in html
+      map = new google.maps.Map(document.querySelector(".googleMap"),mapProp);
+
+      var marker = new google.maps.Marker({
+        position: myCenter,
+        map: map,
+      })
+      marker.setMap(map);
+
+      
+      google.maps.event.addListener(marker,'click',function() {
+          map.setZoom(12);
+          map.setCenter(marker.getPosition());
+      });
+  
+    //generate marker at clicked postion and show detail positon in content
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    }
+
+</script>
 
 <div class="container">
-  <div class="ui-listings-container">
+  <div class="ui-details-container">
     <div class="agecare">
-      <%= @aged_care_services[0][0] %>
-      <%= @aged_care_services[0][1] %>
-      <%= @aged_care_services[0][2] %>
+      <%# <%= @aged_care_services[0][0] %> 
+      <%# <%= @aged_care_services[0][1] %>
+      <%# <%= @aged_care_services[0][2] %> 
       
-      <% @aged_care_services.each do |service| %>
-        <div class="service"><i class="far fa-check-circle"></i> <%= service[3] %></div>
-      <% end %>
-    </div>    
-  </div>
+      <%# <% @aged_care_services.each do |service| %> 
+        <%# <div class="service"><i class="far fa-check-circle"></i> <%= service[3] %>
+      <%# <% end %> 
+      <div class="name">
+        <label class="name-label"for="name">Name: <%= @aged_care.name%></label>
+      </div>
+      <div class="location">
+        <label for="location">Location: <%= @aged_care.location%></label>
+      </div>
+      <div class="cost">
+        <label for="cost">Cost: $<%= @aged_care.cost%> Monthly</label>
+      </div>
+      <div class="services">                                     
+        <label for="">Services:</label>
+      </div>
+
+      <div class="services-list">
+        <%# <% @services_records = AgedCareService.where(aged_care_id: @aged_care.id)%> 
+         <% @services_records = AgedCareService.where(aged_care_id: @id)%>
+
+        <% @services_records.each do |record|%>
+        
+          <%service = Service.find_by(id: record.service_id)%>
+          <li><span class="circle-icon"><i class="far fa-check-circle"></i></span>  <%= service.name%> </li>  
+        <% end %>
+
+
+        </div>
+         
+      </div>
+
+
+    </div> 
+    
+    <div class="map">
+        
+        <div class="googleMap" style="width:250px;height:250px;"></div>
+        <script>
+        addMap(<%= @lng%>,<%= @lat%>);
+        </script>
+      </div>
+    </div>   
+  
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+

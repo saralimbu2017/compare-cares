@@ -13,7 +13,7 @@
 .listings{
  display: flex;
  flex-wrap: wrap;
- justify-content: space-between;
+ justify-content: space-around;
 }
 
 .agecare{
@@ -26,6 +26,9 @@
   justify-content: space-between;
 }
 
+p{
+  font-size: 0.9rem;
+}
 
 p .agecare-rating{
   width:50%

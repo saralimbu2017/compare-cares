@@ -11,6 +11,8 @@ require_relative 'routes/listings'
 require_relative 'routes/details'
 require_relative 'routes/compare'
 require_relative 'routes/compare_graph'
+require 'httparty'
+
 enable :sessions
 
 get '/agedcares' do
@@ -69,7 +71,7 @@ after do
 end 
 
 get '/' do
-  erb :index
+  erb :index, :layout => :layout
 end
 
 get '/signup' do
