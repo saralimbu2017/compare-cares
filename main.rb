@@ -1,6 +1,6 @@
 require 'sinatra'
 require 'pry'
-require 'sinatra/reloader'
+# require 'sinatra/reloader'
 require 'bcrypt'
 require_relative 'db_config'
 require_relative 'models/aged_care'
