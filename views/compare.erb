@@ -2,57 +2,65 @@
   <div class="ui-compare-container">
     <div class="ui-compare-wrapper">
       <% @aged_cares.each do |aged_care| %>
-        <div  class="component">
-          <img src="/images/cover.jpg" alt="" data-name="component1">
-          <div class="ui-compare-component " >
-           
-            <div class="intro-component">
-              <div class="intro-name">
-                <%=aged_care.name%>
-              </div>
-              <div class="intro-icon"> 
-                <span class="cancel-icon">
-                  <input class="cancel-icon" type="image" name="submit" src="/images/cancel.png"  alt="Submit" style="width: 10px;" /> 
-                </span>
-              </div>
+        <div class="component">
+          <div class="img-wrapper">
+            <span class="cancel-icon">
+              <img src="/images/cancel.png"  alt="Submit" />
+            </span>
+            <img src="/images/cover.jpg" alt="" data-name="component1">
+          </div>
+          <div class="intro-component">
+            <div class="intro-name">
+              <h3><%=aged_care.name%></h3>
             </div>
-            <div class="aged_care_content"> 
+            <div class="intro-icon">
+            </div>
+          </div>
+          <div class="ui-compare-component" >
+            <div class="aged_care_content">
               <table>
                 <tr>
-                  <td>Ratings</td><td><p><%=aged_care.rating%> / 10</p></td>
+                  <td>Rating:</td>
+                  <td>
+                    <p><%=aged_care.rating%> / 10</p>
+                  </td>
                 </tr>
                 <tr>
-                  <td>Cost</td><td><p>$<%=aged_care.cost%></p></td>
+                  <td>Cost:</td>
+                  <td>
+                    <p>$<%=aged_care.cost%></p>
+                  </td>
                 </tr>
-                 <tr>
-                  <td>Location</td><td><p><%=aged_care.location%></p></td>
+                <tr>
+                  <td>Location:</td>
+                  <td>
+                    <p><%=aged_care.location%></p>
+                  </td>
                 </tr>
                 <tr>
                   <td colspan="2"></td>
                 </tr>
-                  <tr>
-                  <td colspan="2"><b>Services</b></td>
+                <tr>
+                  <td colspan="2"><b>Services:</b></td>
                 </tr>
-              
                 <% @services_records = AgedCareService.where(aged_care_id: aged_care.id)%>
                 <% @services_records.each do |record|%>
                   <%service = Service.find_by(id: record.service_id)%>
                   <tr>
-                  <td colspan="2"><p>
-                  <%# <span class="circle-icon"><i class="fas fa-circle"></i></span> %>
-                  <%= service.name%></p></td>
-                </tr>
-                  
+                    <td colspan="2">
+                      <p>
+                        <span class="circle-icon"><i class="far fa-check-circle"></i></span>
+                        <%= service.name%></p>
+                    </td>
+                  </tr>
                 <% end%>
               </table>
-              
-              
-              
             </div>
-                <button class="detail-btn"><a href="/details/<%= aged_care.id %>">Details</a> </button>
+            <%# <button class="detail-btn"><a href="/details/<%= aged_care.id">Details</a> </button> %>
           </div>
         </div>
       <%end%>
+
     </div> 
    <script>
       $('.ui-compare-wrapper').on('click', function(event) {
@@ -72,6 +80,7 @@
         
         
       });
+
     </script>
   </div>
 </div>
