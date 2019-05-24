@@ -1,3 +1,4 @@
+
 .ui-listings-container {
   width: 90%;
   height: 100%;
@@ -7,7 +8,8 @@
   margin-right: 3rem;
 }
 
-img {
+
+.agecare img {
   width: 20%;
   margin-top: 2rem;
 }
@@ -32,3 +34,41 @@ img {
   margin: 0;
   /* font-weight: bold; */
 }
+.ui-details-container{
+  margin-top: 2rem;
+  width:50%;
+  display: flex;
+  justify-content: space-between;
+}
+.services-list{
+  margin: 0;
+}
+
+.agecare{
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.map{
+  width: 40%;
+}
+
+.googleMap{
+  margin-top: 2rem;
+  border-radius: 5%;
+}
+
+label{
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.name-label{
+  color: green;
+}
+
+li{
+  list-style: none;
+}
+.circle-icon {
+  color: green;
+ }
+
