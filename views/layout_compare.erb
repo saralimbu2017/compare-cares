@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="/stylesheets/main.css">
   <link rel="stylesheet" href="/stylesheets/listings.css">
   <link rel="stylesheet" href="/stylesheets/services.css">
-  <link rel="stylesheet" href="/stylesheets/compare.css">
+  <%# <link rel="stylesheet" href="/stylesheets/compare.css"> %>
+  <link rel="stylesheet" href="/stylesheets/compare_graph.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
@@ -50,6 +52,10 @@
 
      <%= yield %>
   <footer></footer>
-  
-</body>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="/javascripts/ratingChart.js"></script>
+  <script src="/javascripts/costChart.js"></script>
+
 </html>

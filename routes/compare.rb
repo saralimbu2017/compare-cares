@@ -1,4 +1,3 @@
-
 get '/compare' do
   #@ids_selected = params["ids_selected"].split(',')
   @aged_cares = AgedCare.all
@@ -14,4 +13,5 @@ post '/compare' do
 
   end
   erb :compare, :layout => :layout_compare
+
 end
