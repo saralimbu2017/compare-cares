@@ -13,5 +13,5 @@ A group assignment to create a Ruby web app using a Sinatra, Active Record.ðŸ“Šð
 -Display Dynamic Chart using Chart.js
 
 #Technical Stack
-Sinatra, jQuery, Active Record, pry, bcrypt, httparty 
+Sinatra, jQuery, Active Record, pry, bcrypt, httParty 
 ```
