@@ -17,3 +17,4 @@ Sinatra, jQuery, Active Record, pry, bcrypt, httParty
 ```
 # Access the web app
 https://compare-cares.herokuapp.com/
+- Search by keywords (North Melbourne or South Melbourne)
