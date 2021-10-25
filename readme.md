@@ -19,8 +19,6 @@
  <div>
     <p text-align="justify">
         Compare cares is a  Sinatra application to compare services provided by different aged care facilities.
-
-      
     </p>
 </div>
 
